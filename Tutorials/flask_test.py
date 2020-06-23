@@ -1,4 +1,6 @@
 
+# A very simple Flask Hello World app for you to get started with...
+
 from flask import Flask, request
 from processing import do_calculation
 
@@ -33,7 +35,7 @@ def adder_page():
             result = do_calculation(number1, number2)
             return '''
                 <html>
-                    <body>
+                    <body align="center">
                         <p>The result is {result}</p>
                         <p><a href="/">Click here to calculate again</a>
                     </body>
@@ -42,7 +44,9 @@ def adder_page():
 
     return '''
         <html>
-            <body>
+
+            <body align="center">
+
                 {errors}
                 <p>Enter your numbers:</p>
                 <form method="post" action=".">
