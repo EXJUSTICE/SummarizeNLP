@@ -11,7 +11,7 @@
 			$(function() {
 			  $('a#process_input').bind('click', function() {
 				$.getJSON('/background_process', {
-				  proglang: $('input[name="contents"]').val(),
+				  contents: $('input[name="contents"]').val(),
 				}, function(data) {
 				  $("#result").text(data.result);
 				});
@@ -54,7 +54,7 @@
                         </div>
                         <div style="margin-top:10px"></div>
                         <a href=# id=process_input><button class='btn btn-default'>Submit</button></a>
-                        <p id=result>...</p>
+
                     </div>
 
                 </form>
@@ -70,7 +70,7 @@
         <div class="text-center">
                 <h2>Output</h2>
                 <p>Generated using GPT-2</p>
-
+                <p id=result>...</p>
         </div>
 
         <div class="row">
@@ -113,6 +113,3 @@
 
     </body>
 </html>
-×
-Drag and Drop
-The image will be downloaded
