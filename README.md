@@ -7,3 +7,7 @@ Flask
 
 
 WIP
+Following tutorial
+https://pythonprogramming.net/jquery-flask-tutorial/
+
+Relevant files are flask_app.py & templates/main_page.html
