@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>My scratchboard page</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type=text/javascript>
+			$(function() {
+			  $('a#process_input').bind('click', function() {
+				$.getJSON('/background_process', {
+				  proglang: $('input[name="contents"]').val(),
+				}, function(data) {
+				  $("#result").text(data.result);
+				});
+				return false;
+			  });
+			});
+		</script>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">SummarizeMe</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="text-center">
+
+        <div style="margin-top:100px"></div>
+        <div class="container">
+
+            <h2>SummarizeMe</h2>
+            <p>Paste in text to be summarized below</p>
+            <div class="row" align="center">
+                <form class="form-group">
+                    <div class="form-group form-group-lg">
+
+                        <div class="col-sm-12" >
+                            <textarea class="form-control" type="text" name=contents id="sm" rows="6" style="width: 600px;"></textarea
+                        </div>
+                        <div style="margin-top:10px"></div>
+                        <a href=# id=process_input><button class='btn btn-default'>Submit</button></a>
+                        <p id=result>...</p>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+
+        </div>
+        <div style="margin-top:25px"></div>
+        <hr/>
+        <div style="margin-top:25px"></div>
+        <div class="text-center">
+                <h2>Output</h2>
+                <p>Generated using GPT-2</p>
+
+        </div>
+
+        <div class="row">
+
+        </div>
+
+
+        </div>
+        <div style="margin-top:25px"></div>
+        <hr/>
+        <div style="margin-top:25px"></div>
+        <div class="text" >
+                <h2>About</h2>
+
+
+        </div>
+
+        <div style="margin-top:25px"></div>
+        <hr/>
+        <div style="margin-top:25px"></div>
+        <div class="text" >
+                <h2>Acknowledgements</h2>
+
+                Thanks to Hugging Face for their PyTorch implementation of GPT-2. Thank to PythonAywhere for providing a a great hosting service.
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- /.container -->
+
+    </body>
+</html>
+×
+Drag and Drop
+The image will be downloaded
